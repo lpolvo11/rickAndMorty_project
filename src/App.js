@@ -1,5 +1,5 @@
 import React from "react";
-import Characters from "./components/Characters";
+import Characters from "./api/Characters";
 
 export default function App() {
   return (
