@@ -21,9 +21,9 @@ export default function Characters() {
   useEffect(() => {
     Axios.get(`https://rickandmortyapi.com/api/character/?page=${page}`)
       .then((response) => setCharactersList(response.data.results))
-      .catch((e) => {
+      .catch((err) => {
         console.log(
-          e,
+          err,
           "Error while getting characters list from the server API"
         );
         setIsError(true);
