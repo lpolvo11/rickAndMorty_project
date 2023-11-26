@@ -1,0 +1,101 @@
+/* Style.css */
+
+body {
+  background-color: #21232b;
+  font-family: "Arial", sans-serif;
+  margin-top: 30px;
+  color: #ffffff;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+}
+
+.infos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.infos p {
+  color: #555;
+  margin: 5px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+input {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  background-color: #fffcfc;
+  border-radius: 17px;
+}
+
+.buttons {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.buttons button {
+  margin: 0 10px;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+  background-color: #45a049;
+}
+
+.buttons button:disabled {
+  background-color: #e53935;
+  color: white;
+  cursor: not-allowed;
+}
+
+.main {
+  color: white !important;
+  font-weight: 900;
+  font-size: 30px;
+}
+
+span {
+  color: rgb(125, 125, 161);
+}
