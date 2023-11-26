@@ -1,7 +1,6 @@
 import "./Style.css";
 import axios from "axios";
 import Character from "./Character";
-import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Alert from "@mui/material/Alert";
 import CircularProgress from "@mui/material/CircularProgress";
@@ -35,36 +34,16 @@ export default function Characters() {
   }, [page]);
 
   if (isLoading) {
-    return (
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          height: "100vh",
-        }}
-      >
-        <CircularProgress />
-      </Box>
-    );
+    return <CircularProgress />;
   }
 
   if (isError) {
     return (
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          height: "100vh",
-        }}
-      >
-        <Stack sx={{ width: "100%" }} spacing={2}>
-          <Alert variant="filled" severity="error">
-            Oops! Something went wrong. Please try again later.
-          </Alert>
-        </Stack>
-      </Box>
+      <Stack sx={{ width: "100%" }} spacing={2}>
+        <Alert variant="filled" severity="error">
+          Oops! Something went wrong. Please try again later.
+        </Alert>
+      </Stack>
     );
   }
 
