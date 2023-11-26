@@ -1,9 +1,6 @@
 import "./Style.css";
 import axios from "axios";
 import Character from "./Character";
-import Stack from "@mui/material/Stack";
-import Alert from "@mui/material/Alert";
-import CircularProgress from "@mui/material/CircularProgress";
 import React, { useState, useEffect, useLayoutEffect } from "react";
 
 export default function Characters() {
@@ -34,16 +31,14 @@ export default function Characters() {
   }, [page]);
 
   if (isLoading) {
-    return <CircularProgress />;
+    return <h1>Loading..</h1>;
   }
 
   if (isError) {
     return (
-      <Stack sx={{ width: "100%" }} spacing={2}>
-        <Alert variant="filled" severity="error">
-          Oops! Something went wrong. Please try again later.
-        </Alert>
-      </Stack>
+      <h1 style={{ color: "red" }}>
+        Oops! Something went wrong. Please try again later.
+      </h1>
     );
   }
 
