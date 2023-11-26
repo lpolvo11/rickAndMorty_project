@@ -1,6 +1,10 @@
 import "./Style.css";
-import axios from "axios";
+import Axios from "axios";
 import Character from "./Character";
+import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
+import Alert from "@mui/material/Alert";
+import CircularProgress from "@mui/material/CircularProgress";
 import React, { useState, useEffect, useLayoutEffect } from "react";
 
 export default function Characters() {
@@ -15,8 +19,7 @@ export default function Characters() {
   }, []);
 
   useEffect(() => {
-    axios
-      .get(`https://ickandmortyapi.com/api/character/?page=${page}`)
+    Axios.get(`https://rickandmortyapi.com/api/character/?page=${page}`)
       .then((response) => setCharactersList(response.data.results))
       .catch((e) => {
         console.log(
@@ -31,14 +34,36 @@ export default function Characters() {
   }, [page]);
 
   if (isLoading) {
-    return <h1>Loading..</h1>;
+    return (
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100vh",
+        }}
+      >
+        <CircularProgress />
+      </Box>
+    );
   }
 
   if (isError) {
     return (
-      <h1 style={{ color: "red" }}>
-        Oops! Something went wrong. Please try again later.
-      </h1>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100vh",
+        }}
+      >
+        <Stack sx={{ width: "100%" }} spacing={2}>
+          <Alert variant="filled" severity="error">
+            Oops! Something went wrong. Please try again later.
+          </Alert>
+        </Stack>
+      </Box>
     );
   }
 
