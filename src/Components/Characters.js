@@ -80,7 +80,6 @@ export default function Characters() {
         .includes(filtered.toLowerCase());
     }
   });
-
   return (
     <div>
       <h1 className="main">
