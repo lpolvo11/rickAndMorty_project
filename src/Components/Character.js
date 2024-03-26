@@ -1,4 +1,4 @@
-export default function Character({ characters }) {
+const Character = ({ characters }) => {
   return (
     <div>
       {characters.map((character) => {
@@ -18,4 +18,6 @@ export default function Character({ characters }) {
       })}
     </div>
   );
-}
+};
+
+export default Character;

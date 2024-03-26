@@ -7,7 +7,7 @@ import Alert from "@mui/material/Alert";
 import CircularProgress from "@mui/material/CircularProgress";
 import React, { useState, useEffect, useLayoutEffect } from "react";
 
-export default function Characters() {
+const Characters = () => {
   const [charactersList, setCharactersList] = useState([]);
   const [page, setPage] = useState(1);
   const [filtered, setFiltered] = useState("");
@@ -108,4 +108,6 @@ export default function Characters() {
       </div>
     </div>
   );
-}
+};
+
+export default Characters;
